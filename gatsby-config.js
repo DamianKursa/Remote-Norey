@@ -8,6 +8,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-background-image`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
