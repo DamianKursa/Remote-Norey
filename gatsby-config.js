@@ -1,31 +1,43 @@
 require('dotenv').config()
-// And then you can use the config in gatsby-config.js
-const config = require('gatsby-plugin-config');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Norey - Remote",
+    title: `Norey Remote`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-source-datocms",
+      resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
+      resolve: "gatsby-transformer-remark",
+        options: {
+          plugins: ["gatsby-remark-lottie"]
+        }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Norey Remote`,
+        short_name: `Norey`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#FD7139`,
+        icon: `src/images/icon.png`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      }
+    }
   ],
-};
+}
