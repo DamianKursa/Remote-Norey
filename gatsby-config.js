@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Norey Remote`,
+    title: `Norey-Remote`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Norey Remote`,
+        name: `Norey-Remote`,
         short_name: `Norey`,
         start_url: `/`,
         background_color: `#000`,
