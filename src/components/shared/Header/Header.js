@@ -1,12 +1,27 @@
-import React from 'react'
-
-import Navigation from '../../UIElements/Navigation/Navigation'
+import React from "react"
+import BackgroundImage from "gatsby-background-image"
+import Navigation from "../../UIElements/Navigation/Navigation"
+import { useStaticQuery, graphql } from "gatsby"
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      allDatoCmsAsset(filter: { filename: { eq: "header-background.png" } }) {
+        edges {
+          node {
+            fluid {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
-    <header className="header">
-
-      <Navigation />
-    </header>
+    <BackgroundImage fluid={data.allDatoCmsAsset.edges[0].node.fluid}>
+      <header className='header'>
+        <Navigation />
+      </header>
+    </BackgroundImage>
   )
 }
 
