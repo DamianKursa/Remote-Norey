@@ -6,9 +6,22 @@
   justify-content: center
   align-items: center
   border-bottom: 1px solid rgba(255,255,255,0.2)
-  max-width: 1640px
-  width: 100%
+  &__wrapper
+    max-width: 1920px
+    padding: 0 2rem
+    width: 100%
   &__logo
-    flex: 8
+    flex: 1
+    display: flex
+    justify-content: flex-start
   &__controls
-    flex: 4
+    flex: 2
+    display: flex
+    justify-content: flex-end
+    gap: 35px
+
+.indicator
+  display: flex
+  justify-content: center
+  align-items: center
+  &__icon

@@ -1,0 +1,27 @@
+.button
+  padding: 15px 25px
+  border-radius: 10px
+  background-color: transparent
+  text-decoration: none
+  font-weight: 600
+  font-weight: 16px
+  transition: all .5s ease
+  width: auto
+  border: 1px solid transparent
+  &--primary
+    background-color: $primary
+    color: #fff
+  &--primary--outlined
+    border: 1px solid $primary
+    color: $primary
+  &--secondary
+    background-color: $secondary
+    color: #fff
+    &:hover
+      background-color: transparent
+      border: 1px solid $secondary
+      color: $secondary
+
+  &--secondary--outlined
+    color: $secondary
+    border: 1px solid $secondary
