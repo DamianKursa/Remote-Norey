@@ -9,7 +9,7 @@ const Header = () => {
         edges {
           node {
             fluid {
-              ...GatsbyDatoCmsFluid_tracedSVG
+              ...GatsbyDatoCmsFluid_noBase64
             }
           }
         }
@@ -17,7 +17,7 @@ const Header = () => {
     }
   `)
   return (
-    <BackgroundImage fluid={data.allDatoCmsAsset.edges[0].node.fluid}>
+    <BackgroundImage className="header__background" fluid={data.allDatoCmsAsset.edges[0].node.fluid}>
       <header className='header'>
         <Navigation />
       </header>
