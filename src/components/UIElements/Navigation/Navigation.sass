@@ -19,9 +19,39 @@
     display: flex
     justify-content: flex-end
     gap: 35px
+.sticky-navigation
+  height: 80px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  width: inherit
+  max-width: 1920px
+  &__wrapper
+    position: fixed
+    animation: slide-in .2s 1
+    padding: 0 2rem
+    width: 100%
+    background-color: $secondary
+    display: flex
+    justify-content: center
+  &__logo
+
+  &__controls
+    flex: 2
+    display: flex
+    justify-content: flex-end
+    gap: 35px
+
+  /*KEYFRAMES*/
+  @keyframes slide-in
+    0%
+      top: -80px
+    100%
+      top: 0
 
 .indicator
   display: flex
   justify-content: center
   align-items: center
-  &__icon

@@ -1,26 +1,63 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Logo from "../../../images/Logo.svg"
 import Button from "../Button/Button"
 import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
 
 const Navigation = () => {
+  const [scrollFromTop, setScrollFromTop] = useState(0)
 
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setScrollFromTop(position)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
   return (
-    <div className='navigation__wrapper'>
-      <nav className='navigation'>
-        <div className='navigation__logo'>
+    <div
+      className={
+        scrollFromTop > 20
+          ? "sticky-navigation__wrapper"
+          : "navigation__wrapper"
+      }
+    >
+      <nav className={scrollFromTop > 20 ? "sticky-navigation" : "navigation"}>
+        <div
+          className={
+            scrollFromTop > 20 ? "sticky-navigation__logo" : "navigation__logo"
+          }
+        >
           <img src={Logo} />
         </div>
-        <div className='navigation__controls'>
+        <div
+          className={
+            scrollFromTop > 20
+              ? "sticky-navigation__controls"
+              : "navigation__controls"
+          }
+        >
           <SearchInput />
-          <Button type='secondary' to='/about'>
-            Direct message
+          {console.log(scrollFromTop)}
+          <Button
+            type={
+              scrollFromTop > 20
+                ? "outlined"
+                : "secondary"
+            }
+            to='/about'
+          >
+            Direct message 
           </Button>
           <div className='indicator'>
-            <MenuIndicator  className="indicator__icon" color="#fff" />
+            <MenuIndicator className='indicator__icon' color='#fff' />
           </div>
-        </div>,
+        </div>
       </nav>
     </div>
   )
