@@ -6,7 +6,7 @@ import MenuIndicator from "../MenuIndicator/MenuIndicator"
 
 const Navigation = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
-
+  const limit = 30
   const handleScroll = () => {
     const position = window.pageYOffset
     setScrollFromTop(position)
@@ -22,22 +22,22 @@ const Navigation = () => {
   return (
     <div
       className={
-        scrollFromTop > 20
+        scrollFromTop > limit
           ? "sticky-navigation__wrapper"
           : "navigation__wrapper"
       }
     >
-      <nav className={scrollFromTop > 20 ? "sticky-navigation" : "navigation"}>
+      <nav className={scrollFromTop > limit ? "sticky-navigation" : "navigation"}>
         <div
           className={
-            scrollFromTop > 20 ? "sticky-navigation__logo" : "navigation__logo"
+            scrollFromTop > limit ? "sticky-navigation__logo" : "navigation__logo"
           }
         >
           <img src={Logo} />
         </div>
         <div
           className={
-            scrollFromTop > 20
+            scrollFromTop > limit
               ? "sticky-navigation__controls"
               : "navigation__controls"
           }
@@ -46,7 +46,7 @@ const Navigation = () => {
           {console.log(scrollFromTop)}
           <Button
             type={
-              scrollFromTop > 20
+              scrollFromTop > limit
                 ? "outlined"
                 : "secondary"
             }
