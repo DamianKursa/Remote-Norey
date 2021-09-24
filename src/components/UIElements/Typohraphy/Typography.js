@@ -1,5 +1,5 @@
-import React from 'react'
-import cn from "classnames";
+import React from "react"
+import cn from "classnames"
 
 const variantsMapping = {
   h1: "h1",
@@ -10,16 +10,17 @@ const variantsMapping = {
   h6: "h6",
   subheading1: "h6",
   subheading2: "h6",
-  body1: "p",
-  body2: "p",
-};
+  p: "p",
+}
 
-const Typography = ({ variant, color,align,children, ...props }) => {
-
+const Typography = ({ width, variant, color, align, children, ...props }) => {
   //const Wrapper = variant ? variantsMapping[variant] : "p";
 
   return (
     <div
+      style={{
+        width: width,
+      }}
       className={cn({
         [`typography--variant-${variant}`]: variant,
         [`typography--color-${color}`]: color,
@@ -29,7 +30,7 @@ const Typography = ({ variant, color,align,children, ...props }) => {
     >
       {children}
     </div>
-  );
+  )
 }
 
-export default Typography 
+export default Typography

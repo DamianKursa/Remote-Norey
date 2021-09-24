@@ -1,0 +1,50 @@
+.container
+  max-width: 1920px
+  display: flex
+  width: inhertit
+  height: inhertit
+  &-color
+    &--white
+      background-color: $primary
+    &--primary
+      background-color: $primary
+    &--secondary
+      background-color: $secondary
+  &-align
+    &--left
+      justify-content: flex-start
+    &--right
+      justify-content: flex-end
+    &--center
+      justify-content: center
+  &-vertical-align
+    &--top
+      align-items: flex-start
+    &--center
+      align-items: center
+    &--bottom
+      align-items: flex-end
+  &-direction
+    &--row
+      flex-direction: row
+    &--column
+      flex-direction: column
+  &-gap
+    &--small
+      gap: 1rem
+    &--medium
+      gap: 2rem
+    &--big
+      gap: 3rem
+  &-fluid
+    &-fixed
+      max-width: 1640px
+  &-paddingH
+    &--small
+      padding: 0 1rem
+    &--medium
+      padding: 0 2rem
+    &--big
+      padding: 0 5rem
+    &--large
+      padding: 0 7rem

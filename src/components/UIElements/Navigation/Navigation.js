@@ -8,7 +8,7 @@ import SlidingPanel from "../SlidingPanel/SlidingPanel"
 const Navigation = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
-  const limit = 30
+  const limit = 800
 
   const handleScroll = () => {
     const position = window.pageYOffset

@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Content from "../../UIElements/Content/Content"
+import Container from "../../UIElements/Container/Container"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
@@ -26,12 +27,12 @@ const Header = () => {
     >
       <header className='header'>
         <Navigation />
-        <Content align="center">
+        <Container align='center'>
           <BlurPanel>
-            <Typography align='left' variant='h1'>
-              Lorem ipsum dolor sit amet
+            <Typography color='white' align='left' variant='h1'>
+              Improve efficiency with remote office
             </Typography>
-            <Typography align='left' variant='body1'>
+            <Typography color='white' align='left' variant='h6'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae
               viverra ex. Orci varius natoque penatibus et magnis dis parturient
               montes, nascetur ridiculus mus. Pellentesque magna elit, venenatis
@@ -42,7 +43,7 @@ const Header = () => {
               vulputate.
             </Typography>
           </BlurPanel>
-        </Content>
+        </Container>
       </header>
     </BackgroundImage>
   )
