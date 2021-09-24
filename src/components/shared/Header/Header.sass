@@ -4,6 +4,15 @@
   display: flex
   flex-direction: column
   align-items: center
+
   &__background
     background-size: 100% 100%
     background-position: center center
+    @include small
+      background-image: url("https://www.datocms-assets.com/55568/1632492269-header-bg-mobile.png")
+    @include medium
+      background-image: url("https://www.datocms-assets.com/55568/1632492560-header-background-tablet.png")
+    @include big
+      background-image: url("https://www.datocms-assets.com/55568/1632492547-header-background-sm-desktop.png")
+    @include large
+      background-image: url("https://www.datocms-assets.com/55568/1632492554-header-background-desktop.png")

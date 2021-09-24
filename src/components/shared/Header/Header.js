@@ -8,7 +8,7 @@ import Container from "../../UIElements/Container/Container"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allDatoCmsAsset(filter: { filename: { eq: "header-bg-2.jpg" } }) {
+      allDatoCmsAsset(filter: { filename: { eq: "header-background.png" } }) {
         edges {
           node {
             fluid {
@@ -20,9 +20,8 @@ const Header = () => {
     }
   `)
   return (
-    <BackgroundImage
+    <div
       className='header__background'
-      fluid={data.allDatoCmsAsset.edges[0].node.fluid}
     >
       <header className='header'>
         <Navigation />
@@ -48,7 +47,7 @@ const Header = () => {
           </Container>
         </Container>
       </header>
-    </BackgroundImage>
+    </div>
   )
 }
 
