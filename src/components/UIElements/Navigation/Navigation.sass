@@ -15,11 +15,16 @@
     flex: 1
     display: flex
     justify-content: flex-start
+    @include small
+      height: 100%
+      flex: 2
   &__controls
     flex: 2
     display: flex
     justify-content: flex-end
     gap: 35px
+    @include small
+      flex: 3
 .sticky-navigation
   z-index: 9999
   height: 60px

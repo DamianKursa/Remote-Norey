@@ -4,16 +4,15 @@ import Navigation from "../../UIElements/Navigation/Navigation"
 import { useStaticQuery, graphql } from "gatsby"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
-import Content from "../../UIElements/Content/Content"
 import Container from "../../UIElements/Container/Container"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allDatoCmsAsset(filter: { filename: { eq: "header-background.png" } }) {
+      allDatoCmsAsset(filter: { filename: { eq: "header-bg-2.jpg" } }) {
         edges {
           node {
             fluid {
-              ...GatsbyDatoCmsFluid_noBase64
+              ...GatsbyDatoCmsFluid
             }
           }
         }
@@ -27,22 +26,26 @@ const Header = () => {
     >
       <header className='header'>
         <Navigation />
-        <Container align='center'>
-          <BlurPanel>
-            <Typography color='white' align='left' variant='h1'>
-              Improve efficiency with remote office
-            </Typography>
-            <Typography color='white' align='left' variant='h6'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae
-              viverra ex. Orci varius natoque penatibus et magnis dis parturient
-              montes, nascetur ridiculus mus. Pellentesque magna elit, venenatis
-              eget eleifend vitae, dignissim ut ex. Nulla congue ipsum ipsum,
-              sit amet varius purus lacinia et. Mauris egestas in eros in
-              pellentesque. Aliquam rutrum volutpat aliquam. Vivamus efficitur
-              justo eget ex rhoncus aliquam. Aliquam mattis vitae magna ut
-              vulputate.
-            </Typography>
-          </BlurPanel>
+        <Container direction='column' width='2-sol' height='full'>
+          <Container
+            container
+            width='2-col'
+            height='full'
+            direction='column'
+            padding='big'
+            justify='center'
+          >
+            <BlurPanel>
+              <Typography color='white' align='left' variant='h1'>
+                Remote Office is not bad
+              </Typography>
+              <Typography color='primary' align='left' variant='h6'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                vitae viverra ex. Orci varius natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus
+              </Typography>
+            </BlurPanel>
+          </Container>
         </Container>
       </header>
     </BackgroundImage>

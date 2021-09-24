@@ -16,10 +16,11 @@ const MainPage = () => {
       <Header />
       <main className='main'>
         <Container
-          width='100%'
-          height='900px'
+          container
+          width='2-col'
+          height='section'
           align='center'
-          verticalAlign='center'
+          justify="center"
           direction='column'
           gap='medium'
         >
@@ -36,13 +37,20 @@ const MainPage = () => {
           </Button>
         </Container>
         <Container
+          container
           verticalAlign='center'
-          height='900px'
+          height='section'
           direction='row'
           gap='big'
           fluid='fixed'
         >
-          <Container padding='big' width='50%' align='left' direction='column'>
+          <Container
+            container
+            padding='big'
+            width='2-col'
+            justify="center"
+            direction='column'
+          >
             <Typography align='left' variant='h2' color='black'>
               We connected whole <span className='primary-acent'>teams</span>
             </Typography>

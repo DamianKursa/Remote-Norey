@@ -1,5 +1,6 @@
-@import "./variables/colors";
 @import "./variables/typo";
+@import "./variables/breakpoints";
+@import "./variables/colors.sass";
 @import "./reset";
 @import "./mixins";
 @import "../components//UIElements/SearchInput/SearchInput.sass";

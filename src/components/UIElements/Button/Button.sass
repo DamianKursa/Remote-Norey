@@ -8,6 +8,9 @@
   transition: all .3s ease
   width: auto
   border: 1px solid transparent
+  @include small
+    padding: 10px 20px
+    font-size: 14px
   &--primary
     background-color: $primary
     color: #fff
@@ -25,12 +28,12 @@
     background-color: $secondary
     color: #fff
     &:hover
-      background-color: transparent
-      border: 1px solid $secondary
+      background-color: #fff
+      border: 1px solid #fff
       color: $secondary
 
   &--secondary--outlined
-    color: $secondary
+    color: #fff
     border: 1px solid $secondary
   &--outlined
     color: #fff

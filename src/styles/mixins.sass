@@ -1,1 +1,20 @@
 
+// Small devices
+@mixin small
+  @media (max-width: #{$small})
+    @content
+
+// Medium devices
+@mixin medium
+  @media (min-width: #{$small} ) and (max-width: #{$medium})
+    @content
+
+// Large devices
+@mixin big
+  @media (min-width: #{$medium}) and (min-width: #{$big})
+    @content
+
+// Extra large devices
+@mixin large
+  @media (min-width: #{$large})
+    @content
