@@ -1,4 +1,5 @@
 @import "./variables/colors";
+@import "./variables/typo";
 @import "./reset";
 @import "./mixins";
 @import "../components//UIElements/SearchInput/SearchInput.sass";
@@ -7,4 +8,5 @@
 @import "../components/UIElements/SlidingPanel/SlidingPanel.sass";
 @import "../components/UIElements/BlurPanel/BlurPanel.sass";
 @import "../components/UIElements/Typohraphy/Typography.sass";
+@import "../components/UIElements/Content/Content.sass";
 @import "../components/shared/Header/Header";
