@@ -8,29 +8,13 @@
   top: 0
   z-index: 99999999
   border-radius: 50px 0px 0 15px
+  border: 1px solid $primary
+  transition: all .5s ease
   @include small
     width: 100%
     top: -100px
 
   &--open
     right: 0
-    animation: slide-in-right .3s 1
-
   &--close
-    right: 100%
-    animation: slide-out-right 1s 1
-
-  /*KEYFRAMES*/
-  @keyframes slide-in-right
-    0%
-      transform: translateX(100%)
-    100%
-      transform: translateX(0)
-
-  @keyframes slide-out-right
-    0%
-      opacity: 1
-      transform: translateX(0%)
-    100%
-      transform: translateX(-100%)
-      opacity: 0
+    right: -1000px

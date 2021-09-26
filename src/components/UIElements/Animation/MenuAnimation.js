@@ -17,7 +17,7 @@ const MenuAnimation = () => {
   }, [])
 
   return (
-    <div className="animation" ref={animationContainer}></div>
+    <div className="menu-animation" ref={animationContainer}></div>
   )
 }
 export default MenuAnimation
