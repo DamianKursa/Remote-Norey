@@ -17,7 +17,7 @@ const Navigation = (props) => {
           <div className='navigation__controls'>
             <SearchInput />
             <Button type='outlined' to='/about'>
-              Direct message
+              Message
             </Button>
             <div  onClick={props.isItOpen} className='indicator'>
               <MenuIndicator className='indicator__icon' color='#fff' />

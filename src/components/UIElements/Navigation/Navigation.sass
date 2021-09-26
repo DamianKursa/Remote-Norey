@@ -12,20 +12,21 @@
     max-width: 1920px
     padding: 0 2rem
     width: 100%
+    @include small
+      padding: 0 1rem
   &__logo
     flex: 1
     display: flex
     justify-content: flex-start
     @include small
-      height: 100%
-      flex: 2
+      flex: 1
   &__controls
     flex: 2
     display: flex
     justify-content: flex-end
     gap: 35px
     @include small
-      flex: 3
+      flex: 1
 .container
   &__wrapper
     height: 100px
@@ -42,6 +43,9 @@
   align-items: center
   width: inherit
   max-width: 1920px
+  @include small
+    flex-direction: row
+    margin-top: 10px
   &__wrapper
     position: fixed
     animation: slide-in .2s 1
@@ -50,8 +54,12 @@
     background-color: $secondary
     display: flex
     justify-content: center
+    @include small
+      padding: .5rem 1rem
   &__logo
     height: 35px
+    @include small
+      flex: 2
     img
       height: 35px
 

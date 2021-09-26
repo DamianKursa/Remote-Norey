@@ -16,7 +16,7 @@ const StickyNav = (props) => {
           <div className='sticky-navigation__controls'>
             <SearchInput />
             <Button type='outlined' to='/about'>
-              Direct message
+              Message
             </Button>
             <div onClick={props.isItOpen} className='indicator'>
               <MenuIndicator className='indicator__icon' color='#fff' />
