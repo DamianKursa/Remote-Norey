@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Logo from "../../../images/Logo.svg"
+import Logo from "../../../images/logo.png"
 import Button from "../Button/Button"
 import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
