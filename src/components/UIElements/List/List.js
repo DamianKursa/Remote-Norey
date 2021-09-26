@@ -2,8 +2,8 @@ import React from 'react'
 
 const List = (props) => {
   return (
-    <ul>
-      
+    <ul className="list">
+      {props.children}
     </ul>
   )
 }

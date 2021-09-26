@@ -11,6 +11,7 @@ const variantsMapping = {
   subheading1: "h6",
   subheading2: "h6",
   p: "p",
+  a: "a",
 }
 
 const Typography = ({ width, variant, color, align, children, ...props }) => {
