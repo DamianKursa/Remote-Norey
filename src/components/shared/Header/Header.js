@@ -1,11 +1,28 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import BackgroundImage from "gatsby-background-image"
 import Navigation from "../../UIElements/Navigation/Navigation"
 import { useStaticQuery, graphql } from "gatsby"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Container from "../../UIElements/Container/Container"
+import StickyNav from "../../UIElements/StickyNav/StickyNav"
 const Header = () => {
+  const [scrollFromTop, setScrollFromTop] = useState(0)
+  const [openMenu, setOpenMenu] = useState(false)
+  const limit = 800
+
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setScrollFromTop(position)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       allDatoCmsAsset(filter: { filename: { eq: "header-background.png" } }) {
@@ -20,11 +37,10 @@ const Header = () => {
     }
   `)
   return (
-    <div
-      className='header__background'
-    >
+    <div className='header__background'>
       <header className='header'>
-        <Navigation />
+        <Navigation/>
+        {scrollFromTop > limit ? <StickyNav /> : ''}
         <Container direction='column' width='2-sol' height='full'>
           <Container
             container

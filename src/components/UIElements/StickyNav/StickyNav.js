@@ -5,16 +5,16 @@ import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
 import SlidingPanel from "../SlidingPanel/SlidingPanel"
 
-const Navigation = () => {
+const StickyNav = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-      <div className='navigation__wrapper'>
-        <nav className='navigation'>
-          <div className='navigation__logo'>
+      <div className='sticky-navigation__wrapper'>
+        <nav className='sticky-navigation'>
+          <div className='sticky-navigation__logo'>
             <img src={Logo} />
           </div>
-          <div className='navigation__controls'>
+          <div className='sticky-navigation__controls'>
             <SearchInput />
             <Button type='outlined' to='/about'>
               Direct message
@@ -31,4 +31,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default StickyNav
