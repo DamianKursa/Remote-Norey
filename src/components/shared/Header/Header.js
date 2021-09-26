@@ -15,7 +15,7 @@ const Header = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
   const [openModal, setOpenModal] = useState(false)
-  const [openBooking, setOpenBooking] = useState(true)
+  const [openBooking, setOpenBooking] = useState(false)
   const limit = 800
 
   const handleOpenModal = () => {
