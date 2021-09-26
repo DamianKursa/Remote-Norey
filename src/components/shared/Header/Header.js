@@ -6,11 +6,21 @@ import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Container from "../../UIElements/Container/Container"
 import StickyNav from "../../UIElements/StickyNav/StickyNav"
+import Modal from "../../UIElements/Modal/Modal"
+import Wave from "../../UIElements/Animation/Wave"
 const Header = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   const limit = 800
 
+  const handleOpenModal = () => {
+    setOpenModal(!openModal)
+  }
+
+  const handleCloseModal = () => {
+    setOpenModal(false)
+  }
   const handleScroll = () => {
     const position = window.pageYOffset
     setScrollFromTop(position)
@@ -44,8 +54,27 @@ const Header = () => {
   return (
     <div className='header__background'>
       <header className='header'>
-        <Navigation closeMenu={handleCloseMenu} data={openMenu} isItOpen={handleOpenMenu} />
-        {scrollFromTop > limit ? <StickyNav closeMenu={handleCloseMenu} data={openMenu} isItOpen={handleOpenMenu} /> : ""}
+        <Navigation
+          openModal={handleOpenModal}
+          closeMenu={handleCloseMenu}
+          data={openMenu}
+          isModalOpen={openModal}
+          isItOpen={handleOpenMenu}
+          close={handleCloseModal}
+          handleOpenMenu={handleOpenModal}
+        />
+        {scrollFromTop > limit ? (
+          <StickyNav
+            closeMenu={handleCloseMenu}
+            data={openMenu}
+            isItOpen={handleOpenMenu}
+            close={handleCloseModal}
+            handleOpenMenu={handleOpenModal}
+            openModal={handleOpenModal}
+          />
+        ) : (
+          ""
+        )}
         <Container direction='column' width='2-sol' height='full'>
           <Container
             container
@@ -67,6 +96,10 @@ const Header = () => {
             </BlurPanel>
           </Container>
         </Container>
+        <Modal isModalOpen={openModal} close={handleCloseModal}>
+          <Typography variant="h5">Tutaj bedzie formularz kontaktowy</Typography>
+          <Wave/>
+        </Modal>
       </header>
     </div>
   )

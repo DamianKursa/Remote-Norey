@@ -5,7 +5,6 @@ import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
 import SlidingPanel from "../SlidingPanel/SlidingPanel"
 import Menu from "../../shared/Menu/Menu"
-
 const Navigation = (props) => {
 
   return (
@@ -16,7 +15,7 @@ const Navigation = (props) => {
           </div>
           <div className='navigation__controls'>
             <SearchInput />
-            <Button type='outlined' to='/about'>
+            <Button onClick={props.openModal} type='outlined'>
               Message
             </Button>
             <div  onClick={props.isItOpen} className='indicator'>

@@ -15,7 +15,7 @@ const StickyNav = (props) => {
           </div>
           <div className='sticky-navigation__controls'>
             <SearchInput />
-            <Button type='outlined' to='/about'>
+            <Button onClick={props.openModal} type='outlined' >
               Message
             </Button>
             <div onClick={props.isItOpen} className='indicator'>

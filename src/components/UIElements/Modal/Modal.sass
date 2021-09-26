@@ -1,0 +1,30 @@
+.modal
+  height: 100vh
+  width: 100%
+  flex-direction: column
+  align-items: center
+  position: fixed
+  gap: 35px
+  transition: all .5s
+  display: flex
+  &--close
+    top: -100%
+  &--open
+    top: 0
+    background: $secondary
+  &__close
+    &--wrapper
+      height: 150px
+  .wrapper
+    padding: 5rem
+    height: auto
+    display: flex
+    width: 50%
+    height: auto
+    background: #fff
+    border-radius: 25px
+    @include small
+      border-radius: 15px
+      width: 90%
+      padding: 3rem
+      flex-direction: column-reverse
