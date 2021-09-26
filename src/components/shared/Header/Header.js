@@ -15,7 +15,9 @@ const Header = () => {
     const position = window.pageYOffset
     setScrollFromTop(position)
   }
-
+  const handleOpenMenu = () => {
+    setOpenMenu(!openMenu)
+  }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => {
@@ -39,8 +41,8 @@ const Header = () => {
   return (
     <div className='header__background'>
       <header className='header'>
-        <Navigation/>
-        {scrollFromTop > limit ? <StickyNav /> : ''}
+        <Navigation data={openMenu} isItOpen={handleOpenMenu} />
+        {scrollFromTop > limit ? <StickyNav data={openMenu} isItOpen={handleOpenMenu} /> : ""}
         <Container direction='column' width='2-sol' height='full'>
           <Container
             container

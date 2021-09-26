@@ -3,6 +3,8 @@
 @import "./variables/colors.sass";
 @import "./reset";
 @import "./mixins";
+@import "../components/shared/Menu/Menu.sass";
+@import "../components/UIElements/List/List.sass";
 @import "../components//UIElements/SearchInput/SearchInput.sass";
 @import "../components/UIElements/Navigation/Navigation";
 @import "../components/UIElements/Button/Button.sass";

@@ -5,8 +5,7 @@ import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
 import SlidingPanel from "../SlidingPanel/SlidingPanel"
 
-const StickyNav = () => {
-  const [openMenu, setOpenMenu] = useState(false)
+const StickyNav = (props) => {
 
   return (
       <div className='sticky-navigation__wrapper'>
@@ -19,11 +18,11 @@ const StickyNav = () => {
             <Button type='outlined' to='/about'>
               Direct message
             </Button>
-            <div onClick={() => setOpenMenu(!openMenu)} className='indicator'>
+            <div onClick={props.isItOpen} className='indicator'>
               <MenuIndicator className='indicator__icon' color='#fff' />
             </div>
           </div>
-          <SlidingPanel open={openMenu}>
+          <SlidingPanel open={props.data}>
             <h1>Hello World</h1>
           </SlidingPanel>
         </nav>
