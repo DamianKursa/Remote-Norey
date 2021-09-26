@@ -8,6 +8,7 @@
   transition: all .3s ease
   width: auto
   border: 1px solid transparent
+  cursor: pointer
   @include small
     padding: 15px 10px
     font-size: 12px
@@ -17,6 +18,18 @@
     &:hover
       background-color: $primary
       color: #fff
+  &--primary--left
+    background-color: $primary
+    color: #fff
+    border-radius: 50px 0px 15px 0px
+    width: 20%
+    box-shadow: 5px 7px 12px 0px rgba(0,0,0,0.05)
+    -webkit-box-shadow: 5px 7px 12px 0px rgba(0,0,0,0.05)
+    -moz-box-shadow: 5px 7px 12px 0px rgba(0,0,0,0.05)
+    &:hover
+      background-color: #fff
+      color: $primary
+      border: 1px solid $primary
 
   &--primary--outlined
     border: 1px solid $primary
@@ -24,6 +37,7 @@
     &:hover
       background-color: $primary
       color: #fff
+
   &--secondary
     background-color: $secondary
     color: #fff

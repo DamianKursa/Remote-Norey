@@ -4,7 +4,9 @@ import List from "../../UIElements/List/List"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import MenuAnimation from "../../UIElements/Animation/MenuAnimation"
 import Container from "../../UIElements/Container/Container"
-const Menu = () => {
+import Button from "../../UIElements/Button/Button"
+import BackAnimation from "../../UIElements/Animation/BackAnimation"
+const Menu = (props) => {
   const menuItems = [
     { title: "Home", url: "/", id: 1 },
     { title: "About", url: "/about", id: 2 },
@@ -14,24 +16,24 @@ const Menu = () => {
   ]
   return (
     <Container>
+      <Container container  >
+        <Button type='primary--left' onClick={props.close}>
+          Close
+        </Button>
+      </Container>
+
       <Container container width='1-col' direction='row' gap='large'>
         <List>
           <Typography color='primary' align='left' variant='h6'>
             Find what you are looking
           </Typography>
           {menuItems.map((item) => (
-            <Link className='menu-link' key={item.id} to={item.url}>
+            <Link onClick={props.close} className='menu-link' key={item.id} to={item.url}>
               {item.title}
             </Link>
           ))}
         </List>
         <MenuAnimation name='menuAnim' />
-      </Container>
-      <Container padding="3rem 4rem" container width='1-col' direction='row' gap='large'>
-        <Typography color='primary' align='left' variant='h6'>
-          Latest news
-        </Typography>
-        
       </Container>
     </Container>
   )

@@ -24,7 +24,7 @@ const Navigation = (props) => {
             </div>
           </div>
           <SlidingPanel open={props.data}>
-            <Menu/>
+            <Menu close={props.closeMenu}/>
           </SlidingPanel>
         </nav>
       </div>

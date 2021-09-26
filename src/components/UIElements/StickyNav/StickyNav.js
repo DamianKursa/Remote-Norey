@@ -22,9 +22,6 @@ const StickyNav = (props) => {
               <MenuIndicator className='indicator__icon' color='#fff' />
             </div>
           </div>
-          <SlidingPanel open={props.data}>
-            <h1>Hello World</h1>
-          </SlidingPanel>
         </nav>
       </div>
   )
