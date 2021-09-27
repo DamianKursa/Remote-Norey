@@ -13,6 +13,8 @@ const Section2 = () => {
       content:
         " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
       id: 2,
+      headerColor: "secondary",
+      textColor: "secondary",
       bgColor: "primary",
     },
     {
@@ -31,7 +33,7 @@ const Section2 = () => {
       content:
         " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
       id: 4,
-      headerColor: "secondary",
+      headerColor: "white",
       textColor: "white",
       bgColor: "primary",
     },
@@ -41,6 +43,9 @@ const Section2 = () => {
       content:
         " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
       id: 5,
+      bgColor:'dark',
+      headerColor: "white",
+      textColor: "white",
     },
   ]
   const handleChangeBgColor = (color) => {
@@ -76,10 +81,10 @@ const Section2 = () => {
           gap='small'
           padding="10rem 0 "
         >
-          <Typography align='left' variant='h3' color='black'>
+          <Typography align='left' variant='h3' color='white'>
             What you can get from us?
           </Typography>
-          <Typography align='left' variant='p' color='black'>
+          <Typography align='left' variant='h6' color='white'>
             Click on pills under to get more information about each step.
           </Typography>
 

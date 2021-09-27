@@ -107,18 +107,18 @@ const Header = () => {
             </BlurPanel>
           </Container>
         </Container>
-        <div onClick={handleOpenBookingPanel} className="booking__indicator">
+        {/*<div onClick={handleOpenBookingPanel} className="booking__indicator">
           <BookNow/>
-        </div>
+        </div>*/}
         <Modal isModalOpen={openModal} close={handleCloseModal}>
           <Typography variant='h5'>
             Tutaj bedzie formularz kontaktowy
           </Typography>
           <Wave />
         </Modal>
-        <SlidingPanel open={openBooking}>
+        {/*<SlidingPanel open={openBooking}>
           <Booking close={handleOpenBookingPanel}/>
-        </SlidingPanel>
+        </SlidingPanel> */}
       </header>
     </div>
   )
