@@ -3,6 +3,8 @@
   display: flex
   width: inhertit
   height: inhertit
+  background: none
+  transition: all .5s ease
   &-width
     &--1-col
       width: 100%
@@ -18,15 +20,20 @@
       height: 100%
     &--section
       height: 900px
-
+    &--half-section
+      height: 450px
+    &--vh
+      min-height: 95vh
+      height: auto
   &-color
     &--white
-      background-color: $primary
+      background-color: #fff
     &--primary
       background-color: $primary
     &--secondary
       background-color: $secondary
-
+    &--dark
+      background-color: $dark
   &-justify
     &--top
       justify-content: start

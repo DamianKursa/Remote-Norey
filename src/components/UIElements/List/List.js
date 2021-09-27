@@ -2,7 +2,7 @@ import React from 'react'
 
 const List = (props) => {
   return (
-    <ul className="list">
+    <ul className={`${props.type === 'service'? 'service-list': 'list'}`}>
       {props.children}
     </ul>
   )

@@ -5,3 +5,39 @@
   padding: 3rem 4rem
   @include small
     gap: 5px
+
+.service-list
+  display: flex
+  gap: 20px
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  overflow: scroll
+  margin: 0
+  padding: 0
+  width: 100%
+  flex-wrap: wrap
+
+  @include small
+    gap: 10px
+    flex-direction: row
+    overflow: hidden
+  &-item
+    margin: 0
+    padding: 1rem 2rem
+    background-color: #b1b1b1
+    width: auto
+    border-radius: 25px
+    text-align: center
+    transition: all 1 ease
+    border: 1px solid white
+    @include small
+      padding: .5rem 1rem
+    &--active
+      background-color: $primary
+      color: white
+      border: 1px solid white
+    &--disabled
+      background-color: #f5f5f5
+    &-contrastBG
+      background-color: $secondary !important

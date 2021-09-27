@@ -38,8 +38,8 @@ const MenuIndicator = (props) => {
             transform='translate(2085.5 -63.433)'
             fill='none'
             stroke={hover ? styles.hover.path.fill : styles.normal.path.fill}
-            stroke-linecap='round'
-            stroke-width='3'
+            strokeLinecap='round'
+            strokeWidth='3'
           />
           <path
             id='Path_2'
@@ -48,8 +48,8 @@ const MenuIndicator = (props) => {
             transform='translate(2085.5 -72.5)'
             fill='none'
             stroke={hover ? styles.hover.path.fill : styles.normal.path.fill}
-            stroke-linecap='round'
-            stroke-width='3'
+            strokeLinecap='round'
+            strokeWidth='3'
           />
           <line
             id='Line_3'
@@ -58,8 +58,8 @@ const MenuIndicator = (props) => {
             transform='translate(2098.452 -54.367)'
             fill='none'
             stroke={hover ? styles.hover.path.fill : styles.normal.path.fill}
-            stroke-linecap='round'
-            stroke-width='3'
+            strokeLinecap='round'
+            strokeWidth='3'
           />
         </g>
       </svg>
