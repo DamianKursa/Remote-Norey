@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Navigation from "../../UIElements/Navigation/Navigation"
 import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Container from "../../UIElements/Container/Container"
@@ -66,12 +65,6 @@ const Header = () => {
 
   return (
     <div className='header__background'>
-      <BackgroundImage
-        Tag='section'
-        fluid={imageData}
-        className='header-background-full-wrapper'
-        backgroundColor={`#0A2533`}
-      >
         <header className='header'>
           <Navigation
             openModal={handleOpenModal}
@@ -128,7 +121,6 @@ const Header = () => {
           <Booking close={handleOpenBookingPanel}/>
         </SlidingPanel> */}
         </header>
-      </BackgroundImage>
     </div>
   )
 }
