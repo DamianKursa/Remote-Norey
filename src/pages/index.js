@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import Header from "../components/shared/Header/Header"
 import Section1 from "../sections/Section-1/Section1"
 import Section2 from "../sections/Section-2/Section-2"
+import Section3 from "../sections/Section-3/Section3"
 const MainPage = () => {
   return (
     <div>

@@ -1,5 +1,5 @@
 require("dotenv").config()
-
+const path = require('path')
 module.exports = {
   siteMetadata: {
     title: `Norey-Remote`,
@@ -9,7 +9,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
-    `gatsby-background-image`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -28,6 +28,13 @@ module.exports = {
         rule: {
           include: /assets/ // See below to configure properly
         }
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       }
     },
     {

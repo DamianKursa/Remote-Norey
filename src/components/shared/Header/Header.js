@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
-import BackgroundImage from "gatsby-background-image"
 import Navigation from "../../UIElements/Navigation/Navigation"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Container from "../../UIElements/Container/Container"
@@ -10,7 +10,7 @@ import Modal from "../../UIElements/Modal/Modal"
 import Booking from "../../booking/Booking"
 import Wave from "../../UIElements/Animation/Wave"
 import SlidingPanel from "../../UIElements/SlidingPanel/SlidingPanel"
-import BookNow from '../../UIElements/Animation/BookNow'
+import BookNow from "../../UIElements/Animation/BookNow"
 const Header = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
@@ -49,76 +49,85 @@ const Header = () => {
     }
   }, [])
 
-  const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      allDatoCmsAsset(filter: { filename: { eq: "header-background.png" } }) {
-        edges {
-          node {
-            fluid {
-              ...GatsbyDatoCmsFluid
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "header-background.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       }
-    }
-  `)
+    `
+  )
+  const imageData = data.desktop.childImageSharp.fluid
+
   return (
     <div className='header__background'>
       <header className='header'>
-        <Navigation
-          openModal={handleOpenModal}
-          closeMenu={handleCloseMenu}
-          data={openMenu}
-          isModalOpen={openModal}
-          isItOpen={handleOpenMenu}
-          close={handleCloseModal}
-          handleOpenMenu={handleOpenModal}
-        />
-        {scrollFromTop > limit ? (
-          <StickyNav
+        <BackgroundImage
+          Tag='section'
+          fluid={imageData}
+          className="background-full-wrapper"
+          backgroundColor={`#040e18`}
+        >
+          <Navigation
+            openModal={handleOpenModal}
             closeMenu={handleCloseMenu}
             data={openMenu}
+            isModalOpen={openModal}
             isItOpen={handleOpenMenu}
             close={handleCloseModal}
             handleOpenMenu={handleOpenModal}
-            openModal={handleOpenModal}
           />
-        ) : (
-          ""
-        )}
-        <Container direction='column' width='2-sol' height='full'>
-          <Container
-            container
-            width='2-col'
-            height='full'
-            direction='column'
-            padding='big'
-            justify='center'
-          >
-            <BlurPanel>
-              <Typography color='white' align='left' variant='h1'>
-                Remote Office is not bad
-              </Typography>
-              <Typography color='primary' align='left' variant='h6'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                vitae viverra ex. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus
-              </Typography>
-            </BlurPanel>
+          {scrollFromTop > limit ? (
+            <StickyNav
+              closeMenu={handleCloseMenu}
+              data={openMenu}
+              isItOpen={handleOpenMenu}
+              close={handleCloseModal}
+              handleOpenMenu={handleOpenModal}
+              openModal={handleOpenModal}
+            />
+          ) : (
+            ""
+          )}
+          <Container direction='column' width='2-sol' height='full'>
+            <Container
+              container
+              width='2-col'
+              height='full'
+              direction='column'
+              padding='medium'
+              justify='center'
+            >
+              <BlurPanel>
+                <Typography color='white' align='left' variant='h1'>
+                  Remote Office is not bad
+                </Typography>
+                <Typography color='primary' align='left' variant='h6'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vitae viverra ex. Orci varius natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus
+                </Typography>
+              </BlurPanel>
+            </Container>
           </Container>
-        </Container>
-        {/*<div onClick={handleOpenBookingPanel} className="booking__indicator">
+          {/*<div onClick={handleOpenBookingPanel} className="booking__indicator">
           <BookNow/>
         </div>*/}
-        <Modal isModalOpen={openModal} close={handleCloseModal}>
-          <Typography variant='h5'>
-            Tutaj bedzie formularz kontaktowy
-          </Typography>
-          <Wave />
-        </Modal>
-        {/*<SlidingPanel open={openBooking}>
+          <Modal isModalOpen={openModal} close={handleCloseModal}>
+            <Typography variant='h5'>
+              Tutaj bedzie formularz kontaktowy
+            </Typography>
+            <Wave />
+          </Modal>
+          {/*<SlidingPanel open={openBooking}>
           <Booking close={handleOpenBookingPanel}/>
         </SlidingPanel> */}
+        </BackgroundImage>
       </header>
     </div>
   )
