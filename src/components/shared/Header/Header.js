@@ -69,7 +69,7 @@ const Header = () => {
       <BackgroundImage
         Tag='section'
         fluid={imageData}
-        className='background-full-wrapper'
+        className='header-background-full-wrapper'
         backgroundColor={`#0A2533`}
       >
         <header className='header'>
