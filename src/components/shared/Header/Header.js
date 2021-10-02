@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react"
 import Navigation from "../../UIElements/Navigation/Navigation"
-import { graphql, useStaticQuery } from "gatsby"
 import Typography from "../../UIElements/Typohraphy/Typography"
 import BlurPanel from "../../UIElements/BlurPanel/BlurPanel"
 import Container from "../../UIElements/Container/Container"
 import StickyNav from "../../UIElements/StickyNav/StickyNav"
 import Modal from "../../UIElements/Modal/Modal"
-import Booking from "../../booking/Booking"
 import Wave from "../../UIElements/Animation/Wave"
-import SlidingPanel from "../../UIElements/SlidingPanel/SlidingPanel"
-import BookNow from "../../UIElements/Animation/BookNow"
+
 const Header = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
   const [openModal, setOpenModal] = useState(false)
-  const [openBooking, setOpenBooking] = useState(false)
+  //const [openBooking, setOpenBooking] = useState(false)
   const limit = 800
 
   const handleOpenModal = () => {
@@ -24,13 +21,13 @@ const Header = () => {
   const handleCloseModal = () => {
     setOpenModal(false)
   }
-  const handleOpenBookingPanel = () => {
+  /*const handleOpenBookingPanel = () => {
     setOpenBooking(!openBooking)
-  }
+  } 
 
   const handleCloseBookingPanel = () => {
     setOpenBooking(false)
-  }
+  }*/
   const handleScroll = () => {
     const position = window.pageYOffset
     setScrollFromTop(position)
@@ -47,22 +44,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-
-  const data = useStaticQuery(
-    graphql`
-      query {
-        desktop: file(relativePath: { eq: "header-background.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  )
-  const imageData = data.desktop.childImageSharp.fluid
-
   return (
     <div className='header__background'>
         <header className='header'>

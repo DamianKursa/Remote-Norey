@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Logo from "../../../images/logo.png"
 import Button from "../Button/Button"
 import SearchInput from "../SearchInput/SearchInput"
 import MenuIndicator from "../MenuIndicator/MenuIndicator"
-import SlidingPanel from "../SlidingPanel/SlidingPanel"
 
 const StickyNav = (props) => {
 

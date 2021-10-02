@@ -6,12 +6,13 @@
   position: fixed
   gap: 35px
   transition: all .5s
-  display: flex
+  display: none
   &--close
     top: -100%
   &--open
     top: 0
     background: $secondary
+    animation: name duration timing-function delay iteration-count direction fill-mode
   &__close
     &--wrapper
       height: 150px
@@ -28,3 +29,8 @@
       width: 90%
       padding: 3rem
       flex-direction: column-reverse
+  @keyframes name
+    0%
+
+    90%
+    100%

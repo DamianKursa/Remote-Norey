@@ -1,5 +1,4 @@
 import React from "react"
-import Container from "../Container/Container"
 import Button from "../Button/Button"
 import UpArrow from "../Animation/UpArrow"
 const Modal = (props) => {
