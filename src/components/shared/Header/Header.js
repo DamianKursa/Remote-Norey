@@ -54,7 +54,7 @@ const Header = () => {
       query {
         desktop: file(relativePath: { eq: "header-background.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -66,13 +66,13 @@ const Header = () => {
 
   return (
     <div className='header__background'>
-      <header className='header'>
-        <BackgroundImage
-          Tag='section'
-          fluid={imageData}
-          className="background-full-wrapper"
-          backgroundColor={`#040e18`}
-        >
+      <BackgroundImage
+        Tag='section'
+        fluid={imageData}
+        className='background-full-wrapper'
+        backgroundColor={`#0A2533`}
+      >
+        <header className='header'>
           <Navigation
             openModal={handleOpenModal}
             closeMenu={handleCloseMenu}
@@ -127,8 +127,8 @@ const Header = () => {
           {/*<SlidingPanel open={openBooking}>
           <Booking close={handleOpenBookingPanel}/>
         </SlidingPanel> */}
-        </BackgroundImage>
-      </header>
+        </header>
+      </BackgroundImage>
     </div>
   )
 }
