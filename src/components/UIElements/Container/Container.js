@@ -14,6 +14,7 @@ const Container = ({
   color,
   children,
   gap,
+  className,
   ...props
 }) => {
   return (
@@ -23,6 +24,7 @@ const Container = ({
         margin: margin,
       }}
       className={cn({
+        [`${className}`]: className,
         [`container`]: container,
         [`container-color--${color}`]: color,
         [`container-align--${align}`]: align,

@@ -4,10 +4,19 @@
   display: flex
   flex-direction: column
   align-items: center
-
   &__background
     background-size: 100% auto
     background-position: center center
+  &__content
+    background: url("../images/header-svg.svg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center -50%
+    background-attachment: fixed
+  @include small
+    background-attachment: scroll
+    background-position: bottom
+    background-size: 50%
 .header-animation
   width: 100%
 .header-background-full-wrapper

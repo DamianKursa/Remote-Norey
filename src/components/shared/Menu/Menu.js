@@ -16,19 +16,18 @@ const Menu = (props) => {
   ]
   return (
     <Container>
-      <Container container  >
-        <Button type='primary--left' onClick={props.close}>
-          Close
-        </Button>
-      </Container>
-
       <Container container width='1-col' direction='row' gap='large'>
         <List>
-          <Typography color='primary' align='left' variant='h6'>
-            Find what you are looking
-          </Typography>
+          <Button type='primary--left' onClick={props.close}>
+            Close
+          </Button>
           {menuItems.map((item) => (
-            <Link onClick={props.close} className='menu-link' key={item.id} to={item.url}>
+            <Link
+              onClick={props.close}
+              className='menu-link'
+              key={item.id}
+              to={item.url}
+            >
               {item.title}
             </Link>
           ))}
