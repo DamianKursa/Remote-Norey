@@ -79,11 +79,12 @@ const Header = () => {
           height='full'
         >
           <Container
-            align='center'
+            align='center--mobile-bottom'
             justify='center'
             width='2-col'
             height="full"
             container
+            padding="30px 0"
           >
             <BlurPanel>
               <Typography color='white' align='center' variant='h1'>
