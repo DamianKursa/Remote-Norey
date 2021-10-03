@@ -15,6 +15,7 @@ const Container = ({
   children,
   gap,
   className,
+  bgIcon,
   ...props
 }) => {
   return (

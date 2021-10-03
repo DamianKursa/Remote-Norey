@@ -82,18 +82,17 @@ const Header = () => {
             align='center--mobile-bottom'
             justify='center'
             width='2-col'
-            height="full"
+            height='full'
             container
-            padding="30px 0"
+            padding='30px 0'
           >
             <BlurPanel>
               <Typography color='white' align='center' variant='h1'>
-                Remote Office is not bad
+                Connect with the world of possibilities around the globe.
               </Typography>
               <Typography color='primary' align='center' variant='h6'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                vitae viverra ex. Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus
+                Remote office can enable your company to hire and manage best
+                people from other countries.
               </Typography>
             </BlurPanel>
           </Container>

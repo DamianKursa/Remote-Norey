@@ -11,7 +11,7 @@ const Section2 = () => {
       buttonTitle: "Analysis",
       contentHeader: "We will provide full analysis of your company",
       content:
-        " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
+        "Let us analyze how your company works, what is it’s structure, and what resources are engaged in its everyday life. We will help you determine and discover the potential of switching to remote office. We will investigate how the information flows through the company and between employees.",
       id: 2,
       headerColor: "secondary",
       textColor: "secondary",
@@ -20,8 +20,7 @@ const Section2 = () => {
     {
       buttonTitle: "Plan",
       contentHeader: "We will plan your whole journey to become more efficent",
-      content:
-        " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
+      content:"After analysing the company's workflow, we will propose tailored made plan with goals and implementation of changes . Then plan can be reassesed by client, and accepted or rejected.",
       id: 3,
       bgColor: "secondary",
       headerColor: "white",
@@ -31,7 +30,7 @@ const Section2 = () => {
       buttonTitle: "Implementation",
       contentHeader: "Implementation is hard and time consuming",
       content:
-        " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
+        " We will set up your remote office with elements outlined in the plan. After that, you wil get full onboarding for efficient use of implemented solutions.",
       id: 4,
       headerColor: "white",
       textColor: "white",
@@ -40,8 +39,7 @@ const Section2 = () => {
     {
       buttonTitle: "Measurement and support",
       contentHeader: "Evaluate your results and we will help",
-      content:
-        " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyamerat, sed diam voluptua. At vero eos et accusam et justo",
+      content:"After implementation you won't be left alone. You will have full support in scope of measuring and maintaining performance of your new remote office.",
       id: 5,
       bgColor:'dark',
       headerColor: "white",
@@ -124,7 +122,7 @@ const Section2 = () => {
                   >
                     {item.contentHeader}
                   </Typography>
-                  <Typography align='left' variant='p' color={item.textColor}>
+                  <Typography align='left' variant='h4' color={item.textColor}>
                     {item.content}
                   </Typography>
                 </>

@@ -12,15 +12,16 @@ const Section1 = () => {
       justify='center'
       direction='column'
       gap='medium'
-      padding="big"
+      padding='big'
     >
       <Typography align='center' variant='h2' color='black'>
-        We connected whole <span className='primary-acent'>teams</span>
+        Save money and optimize your
+        <span className='primary-acent'> costs.</span>
       </Typography>
       <Typography align='center' variant='p' color='black'>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo
+        Having the right set of tools in hands of your employees makes their
+        life easier, and their work more efficient. And they can use them as
+        well from their homes as from the office.
       </Typography>
       <Button to='/about' type='primary--outlined'>
         Show me how
