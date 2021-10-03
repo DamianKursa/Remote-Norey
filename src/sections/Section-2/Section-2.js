@@ -79,7 +79,7 @@ const Section2 = () => {
           container
           direction='column'
           gap='small'
-          padding="10rem 0 "
+          padding="5rem 0 0 0"
         >
           <Typography align='left' variant='h3' color='white'>
             What you can get from us?
@@ -109,8 +109,7 @@ const Section2 = () => {
         </Container>
         <Container
           container
-          height="half-section"
-          justify="center"
+          justify="top"
           direction="column"
 
         >

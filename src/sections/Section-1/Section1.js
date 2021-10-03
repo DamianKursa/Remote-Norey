@@ -12,6 +12,7 @@ const Section1 = () => {
       justify='center'
       direction='column'
       gap='medium'
+      padding="big"
     >
       <Typography align='center' variant='h2' color='black'>
         We connected whole <span className='primary-acent'>teams</span>
