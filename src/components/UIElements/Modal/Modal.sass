@@ -5,14 +5,13 @@
   align-items: center
   position: fixed
   gap: 35px
-  transition: all .5s
   display: flex
+  background: $secondary
+  transition: top .25s ease-in-out
   &--close
-    top: -100%
+    top: -100vh
   &--open
     top: 0
-    background: $secondary
-    animation: name duration timing-function delay iteration-count direction fill-mode
   &__close
     &--wrapper
       height: 150px
@@ -29,8 +28,3 @@
       width: 90%
       padding: 3rem
       flex-direction: column-reverse
-  @keyframes name
-    0%
-
-    90%
-    100%

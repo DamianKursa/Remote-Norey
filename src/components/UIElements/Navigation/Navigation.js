@@ -15,7 +15,7 @@ const Navigation = (props) => {
         </div>
         <div className='navigation__controls'>
           <SearchInput />
-          <Button onClick={props.openModal} type='outlined'>
+          <Button onClick={props.openModal} type='secondary--outlined'>
             Message
           </Button>
           <div onClick={props.isItOpen} className='indicator'>
