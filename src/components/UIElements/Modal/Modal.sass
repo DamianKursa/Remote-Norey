@@ -14,16 +14,18 @@
     top: 0
   &__close
     &--wrapper
-      height: 150px
+      height: 100px
   .wrapper
     padding: 5rem
-    height: auto
+    min-height: 650px
     display: flex
     width: 50%
     background: #fff
     border-radius: 25px
+    transition: all 1s ease-in-out
     @include small
       border-radius: 15px
       width: 90%
       padding: 3rem
       flex-direction: column-reverse
+      min-height: 100vh
