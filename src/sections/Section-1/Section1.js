@@ -15,8 +15,7 @@ const Section1 = () => {
       padding='big'
     >
       <Typography align='center' variant='h2' color='black'>
-        Save money and optimize your
-        <span className='primary-acent'> costs.</span>
+        Benefit more from remote office.
       </Typography>
       <Typography align='center' variant='p' color='black'>
         Having the right set of tools in hands of your employees makes their

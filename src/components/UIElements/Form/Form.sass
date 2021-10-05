@@ -1,0 +1,32 @@
+.form
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  gap: 1rem
+  width: 100%
+  &__label
+    font-size: 14px
+    &--wrapper
+      display: flex
+      flex-direction: column
+      gap: 10px
+
+  &__input
+    padding: 1rem
+    width: 100%
+    border-radius: 15px
+    outline: none
+    background: #fff
+    border: 1px solid $secondary
+    font-size: 16px
+    transition: all .3 ease
+    font-family: 'Proxima Nova, sans-serif'
+    font-weight: 200
+    &textarea
+
+    &:focus
+      border: 1px solid $primary
+    &::placeholder
+      color: #d4d4d4
+      font-weight: 100
+      font-family: inherit

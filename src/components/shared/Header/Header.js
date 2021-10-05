@@ -7,6 +7,7 @@ import StickyNav from "../../UIElements/StickyNav/StickyNav"
 import Modal from "../../UIElements/Modal/Modal"
 import Wave from "../../UIElements/Animation/Wave"
 import HeaderSVG from "../../../images/header-svg.svg"
+import Form from "../../UIElements/Form/Form"
 const Header = () => {
   const [scrollFromTop, setScrollFromTop] = useState(0)
   const [openMenu, setOpenMenu] = useState(false)
@@ -81,16 +82,17 @@ const Header = () => {
           <Container
             align='center--mobile-bottom'
             justify='center'
-            width='2-col'
+            width='3-col'
             height='full'
             container
             padding='30px 0'
           >
             <BlurPanel>
               <Typography color='white' align='center' variant='h1'>
-                Connect with the world of possibilities around the globe.
+                Save money and optimize your
+                <span className='primary-acent'> costs.</span>
               </Typography>
-              <Typography color='primary' align='center' variant='h6'>
+              <Typography color='white' align='center' variant='h6'>
                 Remote office can enable your company to hire and manage best
                 people from other countries.
               </Typography>
@@ -101,10 +103,15 @@ const Header = () => {
           <BookNow/>
         </div>*/}
         <Modal isModalOpen={openModal} close={handleCloseModal}>
-          <Typography variant='h5'>
-            Tutaj bedzie formularz kontaktowy
-          </Typography>
-          <Wave />
+          <Container
+            direction='column'
+            align='center'
+            justify='center'
+            width='1-col'
+            container
+          >
+            <Form />
+          </Container>
         </Modal>
         {/*<SlidingPanel open={openBooking}>
           <Booking close={handleOpenBookingPanel}/>
