@@ -74,14 +74,15 @@ const Header = () => {
           container
           padding='medium'
           direction='column'
-          align='center'
+          align='top'
           justify='top'
           width='1-col'
           height='full'
+          
         >
           <Container
             align='center--mobile-bottom'
-            justify='center'
+            justify='top'
             width='3-col'
             height='full'
             container
