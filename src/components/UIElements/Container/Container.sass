@@ -47,6 +47,10 @@
       justify-content: end
     &--center
       justify-content: center
+    &--center--mobile-bottom
+      justify-content: center
+      @include small
+        justify-content: end
 
   &-align
     &--left
@@ -55,8 +59,8 @@
       align-items: center
     &--right
       align-items: flex-end
-    &--center--mobile-bottom
-      align-items: center
+    &--left--mobile-bottom
+      align-items: left
       @include small
         align-items: flex-end
 

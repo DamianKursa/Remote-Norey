@@ -78,26 +78,25 @@ const Header = () => {
           justify='top'
           width='1-col'
           height='full'
-          
         >
           <Container
-            align='center--mobile-bottom'
-            justify='top'
+            align='center'
+            justify='center--mobile-bottom'
             width='3-col'
             height='full'
             container
-            padding='30px 0'
+            padding='30px 20px'
+            gap='small'
+            direction='column'
           >
-            <BlurPanel>
-              <Typography color='white' align='center' variant='h1'>
-                Save money and optimize your
-                <span className='primary-acent'> costs.</span>
-              </Typography>
-              <Typography color='white' align='center' variant='h6'>
-                Remote office can enable your company to hire and manage best
-                people from other countries.
-              </Typography>
-            </BlurPanel>
+            <Typography color='secondary' align='left' variant='h1'>
+              Save money and optimize your
+              <span className='primary-acent'> costs.</span>
+            </Typography>
+            <Typography color='secondary' align='left' variant='h6'>
+              Remote office can enable your company to hire and manage best
+              people from other countries.
+            </Typography>
           </Container>
         </Container>
         {/*<div onClick={handleOpenBookingPanel} className="booking__indicator">
