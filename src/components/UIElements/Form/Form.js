@@ -5,19 +5,21 @@ import Wave from "../Animation/Wave"
 const Form = () => {
   const [nextPage, setNextPage] = useState(false)
 
-  const [state, setState] = React.useState({})
+  const [state, setState] = React.useState()
 
-  const nextFormPage = (event) => {
 
-    const target = event.target
-    const value = target.type === "checkbox" ? target.checked : target.value
-    const name = target.name
+const handleChange = (event) =>{
+  const target = event.target
+  const value = target.type === "checkbox" ? target.checked : target.value
+  const name = target.name
 
-    setState({
-      ...state,
-      [name]: value,
-    })
+  setState({
+    ...state,
+    [name]: value,
+  })
 
+}
+  const nextFormPage = () => {
     setNextPage(!nextPage)
     console.log(state)
   }
@@ -51,6 +53,7 @@ const Form = () => {
                   name='firstName'
                   type='text'
                   placeholder='John'
+                  onChange={handleChange}
                 />
               </span>
               <span className='form__label--wrapper'>
